@@ -13,6 +13,7 @@ object Q5 {
   def evenSum(num: Int): Int = num match{
     case num if num <= 1 => 0
     case num if checkEven(num) => num + evenSum(num-2)
+    case _ => evenSum(num-1)
   }
 
   def main(args: Array[String]): Unit = {

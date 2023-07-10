@@ -6,7 +6,8 @@ object Q4 {
   def checkEven(num:Int):String = num match {
     case num if num == 0 => "Even"
     case num if num == 1 => "Odd"
-    case _ => checkEven(num-2)
+    case num if num > 0 => checkEven(num-2)
+    case _ => checkEven(num+2)
   }
 
   def main(args:Array[String]): Unit = {
